@@ -7,12 +7,10 @@ import {
   DiMongodb,
   DiPython,
   DiGit,
-  DiJava,
 } from "react-icons/di";
 import {
   SiRedis,
   SiFirebase,
-  SiPostgresql,
   SiNestjs,
 } from "react-icons/si";
 import { GrGraphQl } from "react-icons/gr";
