@@ -11,9 +11,9 @@ function AboutCard() {
             Hi Everyone, I am <span className="purple">Bryan Jay Mabuan </span>
             from <span className="purple"> Cebu, Philippines.</span>
             <br />
-            I am currently employed as a software developer at DNA Micro Software Inc.
+            I am currently employed as a Fullstack developer at DNA Micro Software Inc.
             <br />
-            I have completed a bachelor's degree in <span className="purple">Computer Engineering.</span>
+            I have completed a Bachelor's Degree in <span className="purple">Computer Engineering.</span>
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
@@ -31,9 +31,8 @@ function AboutCard() {
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Keep seeing positives in each negative situation!"{" "}
+            "Keep seeing positives in each negative situation !"{" "}
           </p>
-          <footer className="blockquote-footer">Bryan</footer>
         </blockquote>
       </Card.Body>
     </Card>
