@@ -2,23 +2,31 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import okidokisocial from '../../Assets/Projects/okidokisocial.jpg'
-import marianna from '../../Assets/Projects/marianna.png'
-import privateBg from '../../Assets/Projects/private.jpg'
+import okidokisocial from "../../Assets/Projects/okidokisocial.jpg";
+import marianna from "../../Assets/Projects/marianna.png";
+import privateBg from "../../Assets/Projects/private.jpg";
 
 function Projects() {
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
+        <h1 className="project-heading animate__animated animate__fadeIn">
           My Recent <strong className="purple">Works </strong>
         </h1>
-        <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently with approval to add to my portfolio.
+        <p
+          style={{
+            color: "white",
+            fontSize: "1.1rem",
+            marginBottom: "3rem",
+          }}
+          className="animate__animated animate__fadeIn animate__delay-1s"
+        >
+          Here are a few projects I've worked on recently with approval to add
+          to my portfolio.
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+        <Row className="justify-content-center g-4">
+          <Col lg={4} md={6} className="project-card">
             <ProjectCard
               imgPath={okidokisocial}
               isBlog={false}
@@ -29,7 +37,7 @@ function Projects() {
               updates, movements and other crypto news. Designed using ReactJS as frontend library, SailsJs for the backend side and with
               MongoDB as a database."
               ghLink=""
-              demoLink=""              
+              demoLink=""
             />
           </Col>
           <Col md={4} className="project-card">

@@ -5,41 +5,50 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
-
+import "animate.css";
 function About() {
   return (
     <Container fluid className="about-section">
       <Particle />
       <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
+        <Row className="align-items-center justify-content-center">
           <Col
-            md={7}
+            lg={7}
+            md={12}
+            className="animate__animated animate__fadeIn"
             style={{
               justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px",
+              padding: "30px 20px",
             }}
           >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+            <h1 className="project-heading mb-4">
               Know Who <strong className="purple">I am</strong>
             </h1>
             <Aboutcard />
           </Col>
           <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
+            lg={5}
+            md={8}
+            className="about-img animate__animated animate__fadeInRight"
+            style={{ padding: "20px" }}
           >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+            <img
+              src={laptopImg}
+              alt="about"
+              className="img-fluid"
+              style={{
+                filter: "drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2))",
+                transition: "transform 0.3s ease-in-out",
+                "&:hover": { transform: "scale(1.05)" },
+              }}
+            />
           </Col>
         </Row>
-        <h1 className="project-heading">
+        <h1 className="project-heading animate__animated animate__fadeIn">
           Professional <strong className="purple">Skillset </strong>
         </h1>
-
         <Techstack />
-
-        <h1 className="project-heading">
+        <h1 className="project-heading animate__animated animate__fadeIn">
           <strong className="purple">Tools</strong> I use
         </h1>
         <Toolstack />

@@ -1,0 +1,61 @@
+/* .home-social-icons:hover {
+    color: var(--primary-purple);
+    transform: translateY(-5px);
+} */
+
+.home-about-section {
+  padding: clamp(50px, 5vh, 100px) 0;
+}
+
+.home-about-description {
+  padding: 20px;
+}
+
+.home-about-body {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  text-align: justify;
+  padding: 10px 0;
+}
+.home-about-social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 1.5rem 0;
+  list-style: none;
+}
+
+.social-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-social-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid var(--primary-purple);
+  color: var(--primary-purple);
+}
+
+.home-social-icons:hover {
+  background-color: var(--primary-purple);
+  color: white
+}
+@media (max-width: 768px) {
+  .home-about-description {
+    text-align: center;
+  }
+  
+  .myAvtar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+}
