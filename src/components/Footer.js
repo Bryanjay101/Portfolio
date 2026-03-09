@@ -12,7 +12,7 @@ function Footer() {
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>Maintained By Bryan Jay Mabuan</h3>
+          <h3>Maintained by Bryan Jay Mabuan</h3>
         </Col>
         <Col md="4" className="footer-copywright">
           <h3>Copyright © {year} BM</h3>
@@ -20,14 +20,14 @@ function Footer() {
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
             <li className="social-icons">
-                <a
-                  href="https://www.facebook.com/HandsomeTortoise"
-                  style={{ color: "white" }}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <FaFacebook />
-                </a>
+              <a
+                href="https://www.facebook.com/HandsomeTortoise"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <FaFacebook />
+              </a>
             </li>
             <li className="social-icons">
               <a
@@ -41,7 +41,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://www.instagram.com/bryleezy/?hl=en"
+                href="https://www.instagram.com/bryleezy/"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"

@@ -1,6 +1,6 @@
 html {
   --section-background-color: linear-gradient(
-    to bottom left,
+    to bottom right,
     rgba(17, 16, 16, 0.582),
     rgba(12, 8, 24, 0.904)
   );
@@ -12,14 +12,37 @@ html {
   );
 
   --imp-text-color: #c770f0;
+  --primary-bg: #1b1a2ea9;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: 10px;
 }
 
 .purple {
   color: var(--imp-text-color) !important;
+  text-shadow: 0 0 10px rgba(199, 112, 240, 0.5);
 }
 
 button:focus {
   box-shadow: none !important;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(199, 112, 240, 0.2);
+  border-color: var(--imp-text-color);
 }
 
 /* --------- */
@@ -76,10 +99,11 @@ button:focus {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: #1b1a2ea9 !important;
+  background-color: rgba(27, 26, 46, 0.85) !important;
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
   backdrop-filter: blur(15px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar {
@@ -87,7 +111,6 @@ button:focus {
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
-
 }
 
 .navbar-toggler {

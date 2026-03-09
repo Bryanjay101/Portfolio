@@ -1,23 +1,25 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { SiVisualstudiocode, SiPostman, SiNetlify } from "react-icons/si";
-import "animate.css";
+import { motion } from "framer-motion";
+
 function Toolstack() {
+  const icons = [SiVisualstudiocode, SiPostman, SiNetlify];
+
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      {[
-        { Icon: SiVisualstudiocode, delay: "0s" },
-        { Icon: SiPostman, delay: "0.2s" },
-        { Icon: SiNetlify, delay: "0.4s" },
-      ].map(({ Icon, delay }, index) => (
-        <Col
-          key={index}
-          xs={4}
-          md={2}
-          className="tech-icons animate__animated animate__fadeInUp"
-          style={{ animationDelay: delay }}
-        >
-          <Icon />
+      {icons.map((Icon, index) => (
+        <Col xs={4} md={2} key={index}>
+          <motion.div
+            className="tech-icons"
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.1, rotate: 5 }}
+          >
+            <Icon />
+          </motion.div>
         </Col>
       ))}
     </Row>

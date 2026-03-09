@@ -5,7 +5,8 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
-import "animate.css";
+import { motion } from "framer-motion";
+
 function About() {
   return (
     <Container fluid className="about-section">
@@ -15,43 +16,66 @@ function About() {
           <Col
             lg={7}
             md={12}
-            className="animate__animated animate__fadeIn"
             style={{
               justifyContent: "center",
               padding: "30px 20px",
             }}
           >
-            <h1 className="project-heading mb-4">
-              Know Who <strong className="purple">I am</strong>
-            </h1>
-            <Aboutcard />
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className="project-heading mb-4">
+                Know Who <strong className="purple">I am</strong>
+              </h1>
+              <Aboutcard />
+            </motion.div>
           </Col>
           <Col
             lg={5}
             md={8}
-            className="about-img animate__animated animate__fadeInRight"
+            className="about-img"
             style={{ padding: "20px" }}
           >
-            <img
+            <motion.img
               src={laptopImg}
               alt="about"
               className="img-fluid"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              whileHover={{ scale: 1.05 }}
               style={{
                 filter: "drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2))",
-                transition: "transform 0.3s ease-in-out",
-                "&:hover": { transform: "scale(1.05)" },
               }}
             />
           </Col>
         </Row>
-        <h1 className="project-heading animate__animated animate__fadeIn">
-          Professional <strong className="purple">Skillset </strong>
-        </h1>
-        <Techstack />
-        <h1 className="project-heading animate__animated animate__fadeIn">
-          <strong className="purple">Tools</strong> I use
-        </h1>
-        <Toolstack />
+        
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <h1 className="project-heading">
+            Professional <strong className="purple">Skillset </strong>
+          </h1>
+          <Techstack />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <h1 className="project-heading">
+            <strong className="purple">Tools</strong> I use
+          </h1>
+          <Toolstack />
+        </motion.div>
       </Container>
     </Container>
   );
